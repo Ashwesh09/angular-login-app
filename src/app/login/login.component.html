@@ -1,0 +1,54 @@
+<!-- <div class="container">
+  <div class="row justify-content-center">
+    <div class="col-sm-6">
+      <h2 class="text-center mb-4">Login Form</h2>
+      <form #loginform="ngForm" (ngSubmit)="loginUser()">
+        <small class = "danger">{{msg}}</small>
+        <div class="form-group">
+          <label for="email">email:</label>
+          <input type="text" class="form-control" placeholder="Enter email" name="email" [(ngModel)]="user.emailID">
+        </div>
+        <div class="form-group">
+          <label for="password">Password:</label>
+          <input type="password" class="form-control" placeholder="Enter password" name="password" [(ngModel)]="user.password">
+        </div>
+        <div class="form-group form-check">
+          <input type="checkbox" class="form-check-input" id="rememberMe">
+          <label class="form-check-label" for="rememberMe">Remember me</label>
+        </div>
+        <button type="submit" class="btn btn-primary btn-block">Login</button>
+      </form>
+    </div>
+  </div>
+</div> -->
+
+
+<section>
+  <div class="form-box">
+      <div class="form-value">
+          <form #loginform="ngForm" (ngSubmit)="loginUser()">
+              <h2>Login</h2>
+              <div class="inputbox">
+                  <ion-icon name="mail-outline"></ion-icon>
+                  <input type="email" required name="emailID" [(ngModel)]="user.emailID">
+                  <label for="">Email</label>
+              </div>
+              <div class="inputbox">
+                  <ion-icon name="lock-closed-outline"></ion-icon>
+                  <input type="password" required name="password" [(ngModel)]="user.password">
+                  <label for="">Password</label>
+              </div>
+              <div class="forget">
+                  <label for=""><input type="checkbox">Remember Me  <a href="#">Forget Password</a></label>
+
+              </div>
+              <button>Log in</button>
+              <div class="register">
+                  <p>Don't have a account <a href="#">Register</a></p>
+              </div>
+          </form>
+      </div>
+  </div>
+</section>
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
