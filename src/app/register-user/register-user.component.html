@@ -1,0 +1,40 @@
+<section>
+  <div class="form-box">
+      <div class="form-value">
+          <form #loginform="ngForm" (ngSubmit)="registerUser()">
+              <h2>Register</h2>
+              <div class="inputbox">
+                <ion-icon name="mail-outline"></ion-icon>
+                <input type="username" required name="username" [(ngModel)]="user.username">
+                <label for="">Username</label>
+            </div>
+              <div class="inputbox">
+                  <ion-icon name="mail-outline"></ion-icon>
+                  <input type="email" required name="emailID" [(ngModel)]="user.emailID">
+                  <label for="">Email</label>
+              </div>
+              <div class="inputbox">
+                  <ion-icon name="lock-closed-outline"></ion-icon>
+                  <input type="password" required name="password" [(ngModel)]="user.password">
+                  <label for="">Password</label>
+              </div>
+              <div class="inputbox">
+                <ion-icon name="lock-closed-outline"></ion-icon>
+                <input type="password" required name="password"[(ngModel)]="pass">
+                <label for="">Confirm Password</label>
+            </div>
+              <button>Register</button>
+              <div class="register">
+                  <p>Already Have account? <br><a href="http://localhost:4200/">Login</a></p>
+              </div>
+              <div class="register">
+                <p class = "error" >{{msg}}</p>
+            </div>
+
+          </form>
+      </div>
+  </div>
+</section>
+
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
